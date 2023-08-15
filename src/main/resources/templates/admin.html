@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+			
+		<h2 style="text-align: center;">Welcome Admin</h2>
+
+		<form action="#" th:action="@{/userdetails1}" style="padding-left: 450px;padding-top: 125px; "   >
+		<table>
+		<tr>
+		<th >Id  </th>
+			
+			<th><input type="number" 
+				placeholder="Id" class="form-control mb-9 col-9" name="id">
+			</th>
+			</tr>
+				<tr>
+				<th>Passsword     </th>
+				<th>
+				<input type="password" 
+				placeholder="Password" class="form-control mb-9 col-9" name="pwd">
+				</th>
+				</tr>
+					<tr>
+					<th></th>
+					<th>			
+				<input type="submit" onclick="return check(this.form)" value="Login" class="btn btn-info col-5">
+				</th>
+				</tr>
+</table>
+
+		</form>
+		
+		
+	</div>
+<script language="javascript">
+function check(form)
+{
+
+if(form.id.value == "839770" && form.pwd.value == "123")
+{
+	return true;
+}
+else
+{
+	alert("Error Password or Username")
+	return false;
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Status</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+	
+</head>
+<body>
+
+	<div class="container my-2">
+		
+		<table border="1" class = "table table-striped table-responsive-md">
+			<thead>
+			<tr>
+			<td>Name</td>
+			<td>User Id</td>
+			<td>Email</td>
+			<td>Register Number</td>
+			<td>College Name</td>
+			<td>Course Name</td>
+			<td>Aadhar Number</td>
+			<td>Income Certificate number</td>
+			<td>Bank Account Number</td>
+			<td>IFSC code</td>
+			<td>Status</td>	
+			</tr>
+			</thead>
+			<tbody>
+				<tr th:each="student:${student}">
+					<td th:text="${student.name}"></td>
+					<td th:text="${student.userid}"></td>
+					<td th:text="${student.email}"></td>
+					<td th:text="${student.registernumber}"></td>
+					<td th:text="${student.collegename}"></td>
+					<td th:text="${student.coursename}"></td>
+					<td th:text="${student.aadharnumber}"></td>
+					<td th:text="${student.incomenumber}"></td>
+					<td th:text="${student.accountnumber}"></td>
+					<td th:text="${student.ifsc}"></td>
+					<td style="color: red;" th:text="${student.action}">></td>
+				</tr>
+				<tr><th><a   href="/login" class="btn btn-primary">Log out</a></th></tr>
+			</tbody>
+		</table>
+		
+			</div>
+</body>
+</html>
